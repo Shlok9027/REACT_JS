@@ -22,7 +22,7 @@ function App() {
   }
 
   const toggleComplete = (id) => {
-    //console.log(id);
+    
     setTodos((prev) => 
     prev.map((prevTodo) => 
       prevTodo.id === id ? { ...prevTodo, 
