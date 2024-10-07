@@ -1,24 +1,25 @@
 .profile {
     min-height: 100vh;
-    background: url(/background.png) no-repeat;
-    background-color: cover;
+    background: url(/bg_img2.png) no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .profile-container {
-    background: white;
+    background: url(bgg.png) no-repeat;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width: 700px;
+    min-width: 550px;
     border-radius: 10px;
 }
 .profile-pic {
-    max-width: 160px;
+    max-width: 120px;
     aspect-ratio: 1/1;
-    margin: 20px auto;
+    margin: 10px auto;
     border-radius: 50%;
 }
 
@@ -30,14 +31,19 @@
 }
 
 .profile form h3 {
-    font-weight: 500;
+    font-weight: 600;
+    background: -webkit-linear-gradient(16deg, #a43306 , #92ac0e);
+    -webkit-background-clip : text;
+    -webkit-text-fill-color : transparent;
 }
 
 .profile label {
     display: flex;
+    font-size: 21px;
+    font-weight: 600;
     align-items: center;
     gap: 10px;
-    color: gray;
+    color: #9999FF;
     cursor: pointer;
 }
 
@@ -51,14 +57,15 @@
     padding: 10px;
     min-width: 300px;
     border: 1px solid #c9c9c9;
-    outline-color: #077eff;
+    outline-color: #e60e0e;
+    background-color: #B7B0E4;
 
 }
 
 .profile form button {
     border: none;
     color: #E8E8ED;
-    background-color: #C4C5CF;
+    background-color: #c4c5cfd6;
     padding: 16px;
     padding: 8px;
     font-size: 16px;
@@ -66,5 +73,21 @@
 }
 
 .profile form button:hover {
-    background-color: #3558C0;
+    background-color: #39529d;
+}
+@media (max-width: 768px) {
+    .profile{
+        flex-direction: column;
+        background-size: cover;
+        
+    }
+    .profile-container{
+        flex-direction: column-reverse;
+        display: flex;
+   
+    min-width: 430px;
+    border-radius: 10px;
+        
+    }
+    
 }

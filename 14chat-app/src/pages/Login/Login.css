@@ -1,6 +1,6 @@
 .login {
     min-height: 100vh;
-    background: url(/background.png) no-repeat;
+    background: url(/bg_img.png) no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -8,21 +8,27 @@
 }
 
 .login .logo {
-    width: max(20vw, 200px);
+    width: max(14vw, 151px);
+    
 }
 
+
+
 .login-form {
-    background-color: white;
+    background-image:  linear-gradient(45deg, #e6e3af, #8d959c);
     padding: 20px 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     border-radius: 10px;
+    
 
 }
 
 .login-form h2 {
     font-weight: 500;
+    color: #383862;
+    
 
 }
 .form-input {
@@ -34,19 +40,24 @@
 
 .login-form button {
     padding: 10px;
-    background-color: #215de8;
+    background-color: #9999FF;
     color: whitesmoke;
     font-size: 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    
 }
+.login-form button:hover{
+    background-color: #215de8;
+}
+
 
 .login-term {
     display: flex;
     gap: 5px;
     font-size: 12px;
-    color: #a3a3a3;
+    color: #050c0c;
 }
 
 .login-forgot {
@@ -57,13 +68,16 @@
 
 .login-toggle {
     font-size: 13px;
-    color: #5e5b5b;
+    color: #000000;
 }
 
 .login-toggle span {
     font-weight: 500;
-    color: #077eff;
+    color: #9999FF;
     cursor: pointer;
+}
+.login-toggle span:hover {
+    color: #CB80AB;
 }
 
 @media (max-width: 768px) {

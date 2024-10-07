@@ -177,7 +177,8 @@ const LeftSidebar = () => {
     <div className={`ls ${chatVisible ? "hidden" : ""}`}>
       <div className="ls-top">
         <div className="ls-nav">
-          <img className="logo" src={assets.logo} alt="Logo" />
+          <img className="logo" src={assets.logo_icon} alt="Logo" />
+          <p className="chats">Doodle Chat</p>
           <div className="menu">
             <img src={assets.menu_icon} alt="Menu Icon" />
             <div className="sub-menu">

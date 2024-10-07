@@ -1,7 +1,8 @@
 .chat-box {
     height: 75vh;
     position: relative;
-    background-color: #F2EFED;
+    background-color: #f7ebeb;
+    
 }
 .chat-user {
     padding: 10px 15px;
@@ -9,12 +10,17 @@
     align-items: center;
     gap: 10px;
     border-bottom: 1px solid #6b6767;
+    background: -webkit-linear-gradient(60deg, #98053b , #02ad8e);
+    -webkit-background-clip : text;
+    -webkit-text-fill-color : transparent;
+    
     
 }
 
 .chat-user img {
     width: 25px;
     border-radius: 50%;
+    
 }
 
 .chat-user img:first-child{
@@ -30,18 +36,23 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    
 }
 
 .chat-input {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     padding: 10px 15px;
     background-color: white;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+    border-radius: 51px;
+    
+    
+    
 }
 
 .chat-input img {
@@ -61,6 +72,10 @@
     flex: 1;
     border: none;
     outline: none;
+    background: -webkit-linear-gradient(16deg, #5a005a , #ec154e);
+    -webkit-background-clip : text;
+    -webkit-text-fill-color : transparent;
+
 } 
 
 .chat-msg {
@@ -69,6 +84,7 @@
     overflow-y: scroll;
     display: flex;
     flex-direction: column-reverse;
+    
 }
 
 .s-msg div  img,.r-msg div img {
@@ -83,6 +99,7 @@
     justify-content: end;
     gap: 5px;
     padding: 0px 15px;
+    overflow-wrap: break-word;
 }
 
 .r-msg {
@@ -92,21 +109,24 @@
 
 .msg {
     color: whitesmoke;
-    background-color: #2077d4;
+    background-color: #191918;
     padding: 8px;
     max-width: 201px;
     font-size: 11px;
     font-weight: 300px;
     border-radius: 11px 11px 0px 11px;
     margin-bottom: 30px;
+    
 }
 
 .r-msg .msg {
     border-radius: 11px 11px 11px 0px;
+    
 }
 .s-msg div,.r-msg div {
     text-align: center;
     font-size: 7px;
+    
 }
 .msg-img {
     max-width: 230px;
@@ -132,6 +152,10 @@
     font-size: 11px;
     font-weight: 500;
     color: #383838;
+    background: -webkit-linear-gradient(16deg, #2268da , #ec1515);
+    -webkit-background-clip : text;
+    -webkit-text-fill-color : transparent;
+
 }
 .chat-user .arrow {
     display: none;

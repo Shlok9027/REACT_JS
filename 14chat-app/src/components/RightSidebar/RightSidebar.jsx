@@ -1,31 +1,34 @@
-import React, { useContext, useEffect, useState } from 'react'
-import './RightSidebar.css'
-import assets from '../../Assets/assets'
-import { logout } from '../../config/firebase'
-import { AppContext } from '../../context/AppContext'
+import React, { useContext, useEffect, useState } from "react";
+import "./RightSidebar.css";
+import assets from "../../Assets/assets";
+import { logout } from "../../config/firebase";
+import { AppContext } from "../../context/AppContext";
 
 const RightSidebar = () => {
+  const { chatUser, messages } = useContext(AppContext);
+  const [msgImages, setMsgImages] = useState([]);
 
-
-  const {chatUser,messages} = useContext(AppContext);
-  const [msgImages,setMsgImages] = useState([]);
-
-  useEffect(()=>{
+  useEffect(() => {
     let tempVar = [];
-    messages.map((msg)=>{
+    messages.map((msg) => {
       if (msg.image) {
-        tempVar.push(msg.image);            
+        tempVar.push(msg.image);
       }
-    })    
-    setMsgImages(tempVar)
-  },[messages])
-
+    });
+    setMsgImages(tempVar);
+  }, [messages]);
 
   return chatUser ? (
     <div className="rs">
       <div className="rs-profile">
         <img src={chatUser.userData.avatar} alt="" />
-        <h3> {Date.now() - chatUser.userData.lastSeen <= 70000 ? <img  src={assets.green_dot} className='dot' alt="" /> : null} {chatUser.userData.name} </h3>
+        <h3>
+          {" "}
+          {Date.now() - chatUser.userData.lastSeen <= 70000 ? (
+            <img src={assets.green_dot} className="dot" alt="" />
+          ) : null}{" "}
+          {chatUser.userData.name}{" "}
+        </h3>
         <p>{chatUser.userData.bio} </p>
       </div>
 
@@ -33,7 +36,14 @@ const RightSidebar = () => {
       <div className="rs-media">
         <p>Media</p>
         <div>
-          {msgImages.map((url,index)=>(<img onClick={()=>window.open(url)}  key={index}  src={url} alt=''  />))}
+          {msgImages.map((url, index) => (
+            <img
+              onClick={() => window.open(url)}
+              key={index}
+              src={url}
+              alt=""
+            />
+          ))}
           {/* <img src={assets.pic1} alt="" />
           <img src={assets.pic2} alt="" />
           <img src={assets.pic3} alt="" />
@@ -43,18 +53,15 @@ const RightSidebar = () => {
         </div>
       </div>
 
-      <button onClick={()=>logout()} className='rs-button'>Logout</button>
-      
+      <button onClick={() => logout()} className="rs-button">
+        Logout
+      </button>
     </div>
-  )
-
-  :
-
-  (
+  ) : (
     <div className="rs">
-      <button onClick={()=>logout()}>Logout</button>
+      <button onClick={() => logout()}>Logout</button>
     </div>
-  )
-}
+  );
+};
 
-export default RightSidebar
+export default RightSidebar;

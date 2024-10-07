@@ -8,7 +8,8 @@ const upload = async (file) => {
   /** @type {any} */
   const metadata = {
     contentType: "image/jpeg",
-  };
+  }; 
+  
 
   const storageRef = ref(storage, `images/${Date.now() + file.name}`);
   const uploadTask = uploadBytesResumable(storageRef, file, metadata);

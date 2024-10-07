@@ -3,7 +3,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import ProfileUpdate from "./pages/ProfileUpdate/ProfileUpdate";
 import Login from "./pages/Login/Login";
 import Chat from "./pages/Chat/Chat";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./config/firebase";
@@ -19,6 +19,7 @@ const App = () => {
       if (user) {
         navigate("/chat");
         console.log(user);
+        
         await loadUserData(user.uid);
       } else {
         navigate("/");
@@ -38,6 +39,4 @@ const App = () => {
   );
 };
 
-export default App
-
-
+export default App;

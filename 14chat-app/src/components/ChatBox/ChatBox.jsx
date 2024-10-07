@@ -5,7 +5,6 @@ import { AppContext } from "../../context/AppContext";
 import { useState } from "react";
 import {arrayUnion, doc, getDoc, onSnapshot, updateDoc} from "firebase/firestore";
 import { db } from "../../config/firebase";
-
 import { toast } from "react-toastify";
 import upload from "../../lib/upload";
 
@@ -200,7 +199,7 @@ const ChatBox = () => {
         <label htmlFor="image">
           <img src={assets.gallery_icon} alt="Upload Image" />
         </label>
-        <img onClick={sendMessage} src={assets.send_button} alt="Send Button" />
+        <img onClick={sendMessage} src={assets.send_btn} alt="Send Button" />
       </div>
     </div>
   ) : (

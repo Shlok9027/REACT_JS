@@ -7,8 +7,6 @@ import { query, where, collection, getDocs } from "firebase/firestore";
 
 export const AppContext = createContext();
 
-
-
 const AppContextProvider = (props) => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState(null);

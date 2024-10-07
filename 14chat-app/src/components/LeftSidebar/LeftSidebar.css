@@ -15,8 +15,22 @@
 }
 
 .ls-nav .logo {
-    max-width: 140px;
+    max-width: 51px;
+
 }
+.ls-nav .chats {
+    font-size: 18px;
+    font-weight:500;
+    font-style:inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    background: -webkit-linear-gradient(16deg, #4d7ecd , #da0782);
+    -webkit-background-clip : text;
+    -webkit-text-fill-color : transparent;
+}
+
 
 .ls-nav .menu img {
     max-height: 20px;
@@ -25,12 +39,15 @@
 }
 
 .ls-search {
-    background-color: #002670;
+    background-color: #06296d;
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 10px 12px;
     margin-top: 20px;
+    border-radius: 20px;
+
+    
 }
 
 .ls-search img {
@@ -43,6 +60,10 @@
     outline: none;
     color: whitesmoke;
     font-size: 11px;
+    background: -webkit-linear-gradient(16deg, #ce79db , #d40b69);
+    -webkit-background-clip : text;
+    -webkit-text-fill-color : transparent;
+
 }
 .ls-nav input::placeholder {
     color: #6c6c6c;
@@ -53,6 +74,7 @@
     flex-direction: column;
     height: 70%;
     overflow-y: scroll;
+    
 }
 
 .friends img {
@@ -68,6 +90,10 @@
     padding: 10px;
     cursor: pointer;
     font-size: 14px;
+    background: -webkit-linear-gradient(16deg, #be0997 , #afafaf);
+    -webkit-background-clip : text;
+    -webkit-text-fill-color : transparent;
+    
     
 
 }
@@ -83,11 +109,18 @@
 }
 
 .friends:hover {
-    background-color: #ADADFF;
+    background: -webkit-linear-gradient(16deg, #b470bd , #20005b);
+    -webkit-background-clip : text;
+    -webkit-text-fill-color : transparent;
+    
+    
 }
 
 .friends:hover span {
     color: #F5E8ED;
+    background: -webkit-linear-gradient(16deg, #b1b400 , #78059e);
+    -webkit-background-clip : text;
+    -webkit-text-fill-color : transparent;
 }
 
 .ls-nav .menu {
@@ -137,5 +170,17 @@
         width: 100%;
         
     }
+    .friends:hover {
+        background-color: #9999FF;
+        
+        
+    }
+    .friends:hover span {
+        color: #F5E8ED;
+        background: -webkit-linear-gradient(16deg, #b1b400 , #78059e);
+        -webkit-background-clip : text;
+        -webkit-text-fill-color : transparent;
+    }
+    
     
 }
